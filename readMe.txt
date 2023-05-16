@@ -57,5 +57,46 @@ API
 	-- Data
 		-- DataContext.cs
 		Migrations
+
+Angular
+
+
+Angular Versions
+	-- node --version
+		v18.16.0
+	-- npm --version
+		9.5.1
+
+Start with angular
+	-- npm install -g @angular/cli@14
+	-- ng version
+
+Create new angular App
+	-- ng new client
+	-- routing (y)
+	-- css (select)
+
+Run new angular App
+	-- ng serve
+
+Angular Extension
+	-- Angular language service
+
+Other packages
+	-- npm install ngx-bootstrap
+	-- npm install bootstrap@5
+	-- npm install font-awesome
+
+Angular goes to https
+	--
 		
-	
+Summary: End of section 2 : WebAPI
+-- use cli to create sln and project
+-- API Controllers and Endpoints
+-- Entity Framework
+-- API project structure
+-- Configguration & Envionment variables
+-- Source control github	
+
+Summary: End of section 3 : Angular
+-- 
