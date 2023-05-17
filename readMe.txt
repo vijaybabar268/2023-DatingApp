@@ -49,14 +49,23 @@ Migrations
 	-- dotnet-ef
 	-- dotnet ef migrations add InitialCreate -o Data/Migrations
 	-- dotnet ef database update -v
-	
 
+	Incase remove recent migrations
+		-- dotnet ef migrations list
+		-- dotnet ef migrations remove
+		-- dotnet ef migrations list 
+	
+Architecture / project stucture
 API
 	-- Entities
 		-- AppUser.cs
 	-- Data
 		-- DataContext.cs
 		Migrations
+	-- Dtos
+		-- RegisterDto
+client
+	
 
 Angular
 
@@ -99,4 +108,35 @@ Summary: End of section 2 : WebAPI
 -- Source control github	
 
 Summary: End of section 3 : Angular
--- 
+-- use cli to create new angular app 
+-- angular project Files
+-- added bootstrap
+-- use https
+-- add packages using NPM
+
+Summary: End of section 4 : Authentication basics
+-- Implement basic authentication and store password
+-- Using inheritance in C# - DRY
+-- Use C# debugger
+-- Concepts of DTO's
+-- Validations
+-- JWT's token 
+-- services in C#
+-- Middleware in C#
+-- Extenstions in C#
+
+List Requirements
+-- users should be able to login
+-- users should be able to register
+-- users should be able to view other users
+-- users should be able to privetely message other users
+
+Entity
+	Users
+
+How we can go and store user password (how Authentication works?)
+	-- store password in clear text - bad idea?
+	-- hasing the password - secure way but same password same hash created - again not good idea?
+	-- hasing and salting password - Good idea more secure, better way of doing this.
+
+
