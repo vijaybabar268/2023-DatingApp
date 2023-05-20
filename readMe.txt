@@ -139,4 +139,6 @@ How we can go and store user password (how Authentication works?)
 	-- hasing the password - secure way but same password same hash created - again not good idea?
 	-- hasing and salting password - Good idea more secure, better way of doing this.
 
-
+Run app in Docker commands
+	-- docker build -t datingapp .
+	-- docker run --rm  -p 5000:5000 -p 5001:5001 -e ASPNETCORE_HTTP_PORT=https://+:5001 -e ASPNETCORE_URLS=http://+:5000 datingapp
