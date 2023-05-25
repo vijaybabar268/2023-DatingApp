@@ -1,4 +1,6 @@
 using API.Data;
+using API.Interfaces;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 public class Program
@@ -18,7 +20,9 @@ public class Program
                 options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
-            builder.Services.AddCors();            
+            builder.Services.AddCors();
+            
+            builder.Services.AddScoped<ITokenService, TokenService>();
         }
 
         // Configure the HTTP request pipeline.
