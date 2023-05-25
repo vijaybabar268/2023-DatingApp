@@ -63,7 +63,14 @@ API
 		-- DataContext.cs
 		Migrations
 	-- Dtos
-		-- RegisterDto
+		-- RegisterDto.cs
+	--Extentions
+		-- ApplicationServiceExtentions.cs
+	-- Interfaces
+		-- ITokenService.cs
+	-- Services
+		-- TokenService.cs
+	Dockerfile
 client
 	
 
@@ -124,6 +131,15 @@ Summary: End of section 4 : Authentication basics
 -- services in C#
 -- Middleware in C#
 -- Extenstions in C#
+
+Summary: End of section 5 : 
+-- Creating components using angular cli
+-- using angular template forms
+-- angular services
+-- obervables
+-- structural directives
+-- component communication - using input & output properties
+
 
 List Requirements
 -- users should be able to login
