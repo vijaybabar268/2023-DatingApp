@@ -158,3 +158,9 @@ How we can go and store user password (how Authentication works?)
 Run app in Docker commands
 	-- docker build -t datingapp .
 	-- docker run --rm  -p 5000:5000 -p 5001:5001 -e ASPNETCORE_HTTP_PORT=https://+:5001 -e ASPNETCORE_URLS=http://+:5000 datingapp
+
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+imports --> BsDropdownModule.forRoot()
+	-- npm install ngx-bootstrap@latest --legacy-peer-deps
+
