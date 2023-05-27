@@ -7,14 +7,21 @@
             [(ngModel)]="model.username"
             placeholder="Username"
             type="text" 
-            class="form-control"/>
+            class="form-control mb-3"/>
+
+        <div class="mb-2">
+            <label>Who is your fovourate user?</label>
+            <select class="form-select">
+                <option *ngFor="let user of usersFromHomeComponent">{{ user.userName }}</option>
+            </select>
+        </div>
 
         <input 
             name="password"
             [(ngModel)]="model.password"
             placeholder="Password"
             type="text" 
-            class="form-control mt-2"/>        
+            class="form-control"/>        
     </div>
     <div class="text-center">
         <button class="btn btn-success me-2" type="submit">Register</button>
