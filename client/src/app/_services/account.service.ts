@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { User } from '../_models/User';
 import { BehaviorSubject } from 'rxjs';
+import { User } from '../_models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,17 @@ export class AccountService {
         const user = response;
         if (user) {
           localStorage.setItem("user", JSON.stringify(user));
+          this.currentUserSource.next(user);
+        }
+      })
+    )
+  }
+
+  register(model: any) {
+    return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
+      map((user) => {
+        if(user){
+          localStorage.setItem('user', JSON.stringify(user));
           this.currentUserSource.next(user);
         }
       })
