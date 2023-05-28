@@ -132,7 +132,7 @@ Summary: End of section 4 : Authentication basics
 -- Middleware in C#
 -- Extenstions in C#
 
-Summary: End of section 5 : 
+Summary: End of section 5 : Login and Registration in Angular
 -- Creating components using angular cli
 -- using angular template forms
 -- angular services
@@ -140,6 +140,11 @@ Summary: End of section 5 :
 -- structural directives
 -- component communication - using input & output properties
 
+Summary: End of section 6 : Anular Routing
+-- Routing
+-- Adding boottsrap theme
+-- Route guard
+-- Shared module
 
 List Requirements
 -- users should be able to login
