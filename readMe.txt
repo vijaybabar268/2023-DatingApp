@@ -169,3 +169,5 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 imports --> BsDropdownModule.forRoot()
 	-- npm install ngx-bootstrap@latest --legacy-peer-deps
 
+
+npm install bootswatch
