@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Middleware;
 
 public class Program
 {
@@ -15,9 +16,11 @@ public class Program
         // Configure the HTTP request pipeline.
         var app = builder.Build();
         {
+            app.UseMiddleware<ExceptionMiddleware>();
+
             if (app.Environment.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
