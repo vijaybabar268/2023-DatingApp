@@ -15,11 +15,10 @@ namespace API.Controllers
             _context = context;
         }
 
-        [Authorize]
         [HttpGet("auth")]
-        public ActionResult<string> GetResult()
+        public ActionResult<string> GetSecret()
         {   
-            return "secret text";
+            return Unauthorized();
         }
 
         [HttpGet("not-found")]
