@@ -1,60 +1,36 @@
-using API.Data;
 using API.Entities;
+using API.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
     [Authorize]
     public class UsersController : BaseApiController
     {
-        private readonly DataContext _context;
+        private readonly IUserRepository _userRepository;
 
-        public UsersController(DataContext context)
+        public UsersController(IUserRepository userRepository)
         {
-            _context = context;            
+            _userRepository = userRepository;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
-            var users = await _context.Users.ToListAsync();
-
-            return users;
+            return Ok(await _userRepository.GetUsersAsync());
         }
         
-        [HttpGet("{id}")]
-        public async Task<ActionResult<AppUser>> GetUser(int id)
+        [HttpGet("GetUserById/{id}")]
+        public async Task<ActionResult<AppUser>> GetUserById(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-
-            return user;
+            return Ok(await _userRepository.GetUserByIdAsync(id));
         }
 
-        [HttpPost]
-        public void AddUser(AppUser user)
+        [HttpGet("GetUserByUsername/{username}")]
+        public async Task<ActionResult<AppUser>> GetUserByUsername(string username)
         {
-            _context.Users.Add(user);
-            _context.SaveChanges();
-        }
-
-        [HttpPut("{id}")]
-        public void UpdateUser(int id, AppUser user)
-        {
-            AppUser userInDb = _context.Users.Find(id);
-
-            userInDb.UserName = user.UserName;
-
-            _context.SaveChanges();
-        }
-
-        [HttpDelete("{id}")]
-        public void RemoveUser(int id)
-        {
-            AppUser user = _context.Users.Find(id);
-            _context.Users.Remove(user);
-            _context.SaveChanges();
+            return Ok(await _userRepository.GetUserByUsernameAsync(username));
         }
     }
 }
