@@ -171,3 +171,10 @@ imports --> BsDropdownModule.forRoot()
 
 
 npm install bootswatch
+
+End of the section 8
+-- Entity framework relationship
+-- Entity framework conventions
+-- Seeding data into database
+-- The repository pattern [Architecture pattern]
+-- Use AutoMapper [Utility tool]
