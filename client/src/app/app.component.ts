@@ -11,19 +11,12 @@ import { User } from './_models/User';
 export class AppComponent implements OnInit {
 
   title = 'Dating App';
-  user: any;
 
   constructor(private http: HttpClient, private accountService: AccountService){
   }
 
   ngOnInit(): void {
-    this.setCurrentUser();
-
-    this.http.get('https://localhost:5001/api/users/1').subscribe({
-      next: response => this.user = response,
-      error: error => console.log(error),
-      complete: () => console.log('Request has completed with userId.')
-    })
+    this.setCurrentUser();    
   }  
   
   setCurrentUser() {
