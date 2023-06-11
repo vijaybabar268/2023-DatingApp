@@ -178,3 +178,11 @@ End of the section 8
 -- Seeding data into database
 -- The repository pattern [Architecture pattern]
 -- Use AutoMapper [Utility tool]
+
+End of the section 9
+-- Using Typescript
+-- Using interceptor to send jwt token
+-- using bootstrap for styling
+-- basic css trick to inhanced look and feel
+-- using 3rd party photo gallery
+-- using route params
