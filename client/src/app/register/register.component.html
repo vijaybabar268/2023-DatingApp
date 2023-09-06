@@ -1,10 +1,38 @@
 <form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
     <h2 class="text-center text-primary">Sign up</h2>
     <hr>
+    
+    <div class="mb-3">
+        <label style="margin-right: 10px;">I am a: </label>
+        <label class="form-check-label" style="margin-right: 10px;">
+            <input type="radio" class="form-check-label" value="male" formControlName="gender"> Male
+        </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-label" value="female" formControlName="gender"> Female
+        </label>
+    </div>
+    
     <app-text-input 
         [formControl]="$any(registerForm.controls['username'])" 
         [label]="'Username'"></app-text-input>
+
+
+    <app-text-input 
+        [formControl]="$any(registerForm.controls['knownAs'])" 
+        [label]="'Known As'"></app-text-input>
     
+    <app-text-input 
+        [formControl]="$any(registerForm.controls['dateOfBirth'])" [type]="'date'"
+        [label]="'Date Of Birth'"></app-text-input>
+
+    <app-text-input 
+        [formControl]="$any(registerForm.controls['city'])" 
+        [label]="'City'"></app-text-input>
+
+    <app-text-input 
+        [formControl]="$any(registerForm.controls['country'])" 
+        [label]="'Country'"></app-text-input>
+
     <app-text-input 
         [formControl]="$any(registerForm.controls['password'])" 
         [label]="'Password'" 
